@@ -1,6 +1,6 @@
 {
   "name": "hubot-azure-redis-brain",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A hubot brain using azure redis cache",
   "main": "index.coffee",
   "repository": {
