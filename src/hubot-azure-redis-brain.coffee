@@ -11,8 +11,8 @@ module.exports = (robot) ->
 
   client.auth accessKey
 
-  client.set 'foo', 'bar', (err, reply) ->
-    console.log reply
+  robot.brain.on 'save', (key, val = {}) ->
+    client.set key, val #TODO: not update value
 
   client.get 'foo', (err, reply) ->
     console.log reply
