@@ -1,18 +1,20 @@
 redis = require 'redis'
 
-host = process.env.AZURE_REDIS_HOST
-port = process.env.AZURE_REDIS_PORT or 6380
-accessKey = process.env.AZURE_REDIS_ACCESS_KEY
+module.exports = (robot) ->
 
-tls_option = {servername: host}
+  host = process.env.AZURE_REDIS_HOST
+  port = process.env.AZURE_REDIS_PORT or 6380
+  accessKey = process.env.AZURE_REDIS_ACCESS_KEY
 
-client = redis.createClient port, host, {tls: tls_option}
-client.auth accessKey
+  tls_option = {servername: host}
+  client = redis.createClient port, host, {tls: tls_option}
 
-client.set 'foo', 'bar', (err, reply) ->
-  console.log reply
+  client.auth accessKey
 
-client.get 'foo', (err, reply) ->
-  console.log reply
+  client.set 'foo', 'bar', (err, reply) ->
+    console.log reply
 
-client.quit()
+  client.get 'foo', (err, reply) ->
+    console.log reply
+
+  client.quit()
