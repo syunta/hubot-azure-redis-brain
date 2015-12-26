@@ -11,6 +11,7 @@ module.exports = (robot) ->
 
   client.auth accessKey
 
+  # it is dangeraus for shared redis cache
   robot.brain.on 'save', (key, val = {}) ->
     client.set key, val #TODO: not update value
 
