@@ -1,0 +1,16 @@
+{
+  "name": "hubot-azure-redis-brain",
+  "version": "0.0.0",
+  "description": "A hubot brain using azure redis cache",
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "hubot-azure-redis-brain"
+  },
+  "keywords": [
+    "hubot",
+    "azure"
+  ],
+  "author": "syunta",
+  "license": "MIT"
+}
