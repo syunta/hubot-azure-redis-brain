@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.brain.on 'save', (key, val = {}) ->
     client.set key, val #TODO: not update value
 
-  client.get 'foo', (err, reply) ->
-    console.log reply
+  robot.brain.on 'get', (key) ->
+    client.get key, (err, reply) -> reply or err
 
   client.quit()
