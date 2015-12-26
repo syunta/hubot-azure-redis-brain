@@ -17,4 +17,5 @@ module.exports = (robot) ->
   robot.brain.on 'get', (key) ->
     client.get key, (err, reply) -> reply or err
 
-  client.quit()
+  robot.brain.on 'close', ->
+    client.quit()
