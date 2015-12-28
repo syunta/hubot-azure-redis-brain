@@ -1,3 +1,6 @@
+# Description:
+#   A hubot brain using azure redis cache
+
 redis = require 'redis'
 
 module.exports = (robot) ->
