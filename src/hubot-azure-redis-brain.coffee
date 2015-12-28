@@ -6,6 +6,7 @@ module.exports = (robot) ->
   port = process.env.AZURE_REDIS_PORT or 6380
   accessKey = process.env.AZURE_REDIS_ACCESS_KEY
   tls_option = {servername: host}
+  storageKey = 'hoge'
 
   robot.brain.setAutoSave false
 
