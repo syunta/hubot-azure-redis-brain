@@ -16,5 +16,9 @@ module.exports = (robot) ->
     client.get storageKey, (err, reply) ->
       robot.brain.mergeData (JSON.parse reply)
 
+  # called by event of robot.brain.set
+  robot.brain.on 'loaded', (val) ->
+    client.set storageKey, JSON.stringify val
+
   robot.brain.on 'close', ->
     client.quit()
