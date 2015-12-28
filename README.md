@@ -13,21 +13,21 @@ See http://www.jasonpoon.ca/2015/06/12/how-to-deploy-hubot-in-slack-to-azure/
 
 Azure Web Site was integrated Azure App Service. So you can deploy hubot on Azure App Service similarly.
 
-###  How to use azure redis cache
+### How to use azure redis cache
 
 See https://azure.microsoft.com/en-us/documentation/articles/cache-nodejs-get-started/
 
 You may skip the clause *Enable the non-SSL endpoint*, because node-redis has suporteded it already.
 
-## Installtion
+## Installation
 
-```bash
+```
 npm install hubot-azure-redis-brain --save
 ```
 
 Then add hubot-azure-redis-brain to external-scripts.json
 
-```json
+```
 [
   ...
   "hubot-azure-redis-brain",
