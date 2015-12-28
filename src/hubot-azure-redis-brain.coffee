@@ -12,7 +12,9 @@ module.exports = (robot) ->
 
   client = redis.createClient port, host, {tls: tls_option}
 
-  client.auth accessKey
+  client.auth accessKey, (err) ->
+    client.get storageKey, (err, reply) ->
+      robot.brain.mergeData (JSON.parse reply)
 
   robot.brain.on 'close', ->
     client.quit()
