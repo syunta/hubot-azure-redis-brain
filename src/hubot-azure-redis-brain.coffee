@@ -8,7 +8,7 @@ module.exports = (robot) ->
   host = process.env.AZURE_REDIS_HOST
   port = process.env.AZURE_REDIS_PORT or 6380
   accessKey = process.env.AZURE_REDIS_ACCESS_KEY
-  storageKey = process.env.AZURE_REDIS_STORAGE_KEY
+  storageKey = process.env.AZURE_REDIS_STORAGE_KEY or 'hubot-brain'
   tls_option = {servername: host}
 
   robot.brain.setAutoSave false

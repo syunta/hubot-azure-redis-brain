@@ -42,4 +42,4 @@ You must set the following items in your Azure App Service's App settings.
 * AZURE_REDIS_HOST (yourredishost.redis.cache.windows.net)
 * AZURE_REDIS_PORT (default: 6380)
 * AZURE_REDIS_ACCESS_KEY
-* AZURE_REDIS_STORAGE_KEY
+* AZURE_REDIS_STORAGE_KEY (default: 'hubot-brain')
